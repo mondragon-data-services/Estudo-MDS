@@ -1,0 +1,68 @@
+{
+  "expectations": [
+    {
+      "id": "a2417d23-29a5-40d7-b4e5-ba882314f188",
+      "kwargs": {
+        "column_set": [
+          "season",
+          "round",
+          "driver_id",
+          "stop",
+          "lap",
+          "duration"
+        ],
+        "exact_match": false
+      },
+      "meta": {
+        "descricao": "O contrato de colunas das paradas n\u00e3o mudou."
+      },
+      "severity": "critical",
+      "type": "expect_table_columns_to_match_set"
+    },
+    {
+      "id": "578ad20d-639c-47de-b296-ede94121f460",
+      "kwargs": {
+        "column_list": [
+          "season",
+          "round",
+          "driver_id",
+          "stop"
+        ]
+      },
+      "meta": {
+        "descricao": "Cada parada (1\u00aa, 2\u00aa, 3\u00aa...) de um piloto \u00e9 registrada uma vez."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "2efbfddc-b02f-4877-a178-6af01837d167",
+      "kwargs": {
+        "column": "lap",
+        "regex": "^\\d+$"
+      },
+      "meta": {
+        "descricao": "O n\u00famero da volta \u00e9 inteiro."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "8aa1c1a1-157d-4198-a256-49737054c765",
+      "kwargs": {
+        "column": "duration"
+      },
+      "meta": {
+        "descricao": "Toda parada tem dura\u00e7\u00e3o medida."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    }
+  ],
+  "id": "57687931-994f-4988-ade8-93d6a7272111",
+  "meta": {
+    "great_expectations_version": "1.22.0"
+  },
+  "name": "bronze_pit_stops",
+  "notes": null
+}

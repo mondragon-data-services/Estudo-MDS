@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "61c9dbed-4fae-4e66-bce8-f8c0bf18b97b",
+      "name": "bronze_constructor_standings"
+    },
+    "batch_definition": {
+      "id": "f07c5682-976e-4ab1-a9f6-0388e4a4ffa6",
+      "name": "lote_completo"
+    },
+    "datasource": {
+      "id": "2b2ead13-4d51-4109-92fb-6ab6dae4a52e",
+      "name": "f1_pandas"
+    }
+  },
+  "id": "d1f67c22-0a69-4aa2-97d3-39fb0ee3d5c8",
+  "name": "vd_bronze_constructor_standings",
+  "suite": {
+    "id": "2e104c50-441f-4994-b1bf-b57ae9ab457a",
+    "name": "bronze_constructor_standings"
+  }
+}

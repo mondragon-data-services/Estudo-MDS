@@ -1,0 +1,30 @@
+# ---------------------------------------------------------------------------
+# Projeto didático: Engenharia de Dados com Fórmula 1
+# Testado com Python 3.12
+# Instalação:  pip install -r requirements.txt
+# ---------------------------------------------------------------------------
+
+# --- Ingestão ---------------------------------------------------------------
+requests>=2.31,<3            # cliente HTTP para consumir a API pública da F1
+tenacity>=8.2,<10            # retry/backoff em chamadas de rede
+
+# --- Armazenamento e processamento -----------------------------------------
+pandas>=2.1,<3               # DataFrames (o Great Expectations ainda não suporta pandas 3)
+pyarrow>=15                  # engine de leitura/escrita Parquet
+numpy>=1.26,<3
+
+# --- Qualidade de dados -----------------------------------------------------
+great-expectations>=1.3,<2   # validação declarativa da fonte e da ingestão
+
+# --- Analytics / visualização ----------------------------------------------
+streamlit>=1.49              # aplicativo analítico (multipágina)
+plotly>=5.20                 # gráficos interativos
+matplotlib>=3.8              # gráficos estáticos usados nos notebooks
+
+# --- Notebooks --------------------------------------------------------------
+jupyterlab>=4.0
+ipykernel>=6.29
+nbformat>=5.9
+
+# --- Testes -----------------------------------------------------------------
+pytest>=8.0

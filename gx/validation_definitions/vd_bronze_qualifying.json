@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "129c6908-ec15-444f-b7f3-cf558c7c7781",
+      "name": "bronze_qualifying"
+    },
+    "batch_definition": {
+      "id": "ae80b168-2880-4103-bd08-34b5c0792e4b",
+      "name": "lote_completo"
+    },
+    "datasource": {
+      "id": "2b2ead13-4d51-4109-92fb-6ab6dae4a52e",
+      "name": "f1_pandas"
+    }
+  },
+  "id": "43f3ddaf-a245-4335-b005-36d4730d3f9d",
+  "name": "vd_bronze_qualifying",
+  "suite": {
+    "id": "bd24e3c9-c82e-41ee-939d-b8baf4230647",
+    "name": "bronze_qualifying"
+  }
+}

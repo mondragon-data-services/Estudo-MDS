@@ -1,0 +1,12 @@
+{
+  "actions": [],
+  "id": "12dee021-ec95-4b26-9d9a-d0e28a8756ff",
+  "name": "cp_gold_agg_constructor_season",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "eda92dd0-bcd9-4b51-bc8d-acf20225bb0d",
+      "name": "vd_gold_agg_constructor_season"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "00b95eb5-c82d-419b-baf5-d26bfb267016",
+      "name": "bronze_races"
+    },
+    "batch_definition": {
+      "id": "0e6c38a4-2e0b-4b59-98b3-71993b00f62e",
+      "name": "lote_completo"
+    },
+    "datasource": {
+      "id": "2b2ead13-4d51-4109-92fb-6ab6dae4a52e",
+      "name": "f1_pandas"
+    }
+  },
+  "id": "bd89b34a-4068-48f4-8fda-f0bece784df2",
+  "name": "vd_bronze_races",
+  "suite": {
+    "id": "9639ec31-1283-46bf-bdb3-2b96d9b9aad2",
+    "name": "bronze_races"
+  }
+}

@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# ---------------------------------------------------------------------------
+# Dados
+# ---------------------------------------------------------------------------
+# Regra geral de projetos de dados: dado NÃO vai para o repositório de código.
+# Ele é grande, muda o tempo todo e polui o histórico de diffs.
+#
+# Aqui abrimos UMA exceção didática: a camada `gold` (~100 KB) fica versionada
+# para que qualquer pessoa possa clonar o repositório e abrir o app Streamlit
+# imediatamente, sem esperar a ingestão. As camadas raw/bronze/silver são
+# reconstruídas com `python scripts/run_pipeline.py`.
+data/raw/
+data/bronze/
+data/silver/
+
+# ---------------------------------------------------------------------------
+# Great Expectations
+# ---------------------------------------------------------------------------
+# As suites, os checkpoints e o great_expectations.yml SÃO código: vão para o
+# repositório. O que fica de fora é o histórico de execuções e os HTMLs gerados.
+gx/uncommitted/
+
+# Data Docs (relatório HTML gerado a cada execução: ~6 MB, muda sempre).
+# Quer publicar no GitHub Pages? Comente a linha abaixo e faça o commit da pasta.
+docs/data_docs/*
+!docs/data_docs/.gitkeep
+
+# ---------------------------------------------------------------------------
+# Sistema operacional / editores
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

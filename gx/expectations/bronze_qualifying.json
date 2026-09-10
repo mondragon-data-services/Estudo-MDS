@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "id": "4c2aa376-ca46-4ac6-86f2-e583d6a9fb48",
+      "kwargs": {
+        "column_set": [
+          "season",
+          "round",
+          "driver_id",
+          "constructor_id",
+          "position",
+          "q1",
+          "q2",
+          "q3"
+        ],
+        "exact_match": false
+      },
+      "meta": {
+        "descricao": "O contrato de colunas da classifica\u00e7\u00e3o n\u00e3o mudou."
+      },
+      "severity": "critical",
+      "type": "expect_table_columns_to_match_set"
+    },
+    {
+      "id": "ea9fc249-2d91-48d2-8acd-b89787772ea3",
+      "kwargs": {
+        "column_list": [
+          "season",
+          "round",
+          "driver_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Um piloto tem um \u00fanico resultado de classifica\u00e7\u00e3o."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "8c1841f0-a72c-4de3-9f03-0a19d436c401",
+      "kwargs": {
+        "column": "position",
+        "regex": "^\\d+$"
+      },
+      "meta": {
+        "descricao": "Posi\u00e7\u00e3o no grid provis\u00f3rio \u00e9 inteira."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "8ab55fe4-5ce5-4c6b-a670-78654711716d",
+      "kwargs": {
+        "column": "driver_id"
+      },
+      "meta": {
+        "descricao": "Sem piloto n\u00e3o existe volta de classifica\u00e7\u00e3o."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3a9513bf-69b4-4bbe-927f-ae3397227651",
+      "kwargs": {
+        "column": "q1",
+        "mostly": 0.9,
+        "regex": "^\\d+:\\d{2}\\.\\d{3}$"
+      },
+      "meta": {
+        "descricao": "Tempo de Q1 no formato m:ss.mmm. Toleramos 10% de exce\u00e7\u00f5es porque quem n\u00e3o marca tempo fica sem registro."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "932ecfe5-afc9-428f-8685-860bae785c8c",
+      "kwargs": {
+        "column": "q1",
+        "mostly": 0.95
+      },
+      "meta": {
+        "descricao": "Quase todo piloto marca tempo no Q1 \u2014 'mostly' \u00e9 como o GX expressa uma toler\u00e2ncia expl\u00edcita."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    }
+  ],
+  "id": "bd24e3c9-c82e-41ee-939d-b8baf4230647",
+  "meta": {
+    "great_expectations_version": "1.22.0"
+  },
+  "name": "bronze_qualifying",
+  "notes": null
+}

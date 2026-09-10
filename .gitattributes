@@ -1,0 +1,17 @@
+# Normaliza as quebras de linha: LF no repositório, nativo no disco de cada um.
+# Sem isto, um arquivo editado no Windows aparece como "totalmente alterado"
+# para quem usa Linux ou macOS — e o diff vira ruído.
+* text=auto eol=lf
+
+# Scripts do PowerShell precisam de CRLF para rodar em qualquer console Windows.
+*.ps1 text eol=crlf
+
+# Binários: o Git não deve tentar converter nada aqui.
+*.parquet binary
+*.png binary
+*.jpg binary
+*.ico binary
+
+# Notebooks são JSON: tratados como texto, mas sem merge automático
+# (o merge de .ipynb quase sempre corrompe o arquivo — resolva escolhendo um lado).
+*.ipynb text eol=lf merge=binary

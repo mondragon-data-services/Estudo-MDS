@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "id": "5ccf1d1b-b18b-4efa-b5dd-5ff1ed406c34",
+      "kwargs": {
+        "column_list": [
+          "season",
+          "constructor_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Gr\u00e3o do mart: uma linha por equipe por temporada."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "163fd05e-1155-4838-9314-277cabd7bd20",
+      "kwargs": {
+        "column_A": "podios",
+        "column_B": "vitorias",
+        "or_equal": true
+      },
+      "meta": {
+        "descricao": "P\u00f3dios >= vit\u00f3rias tamb\u00e9m no n\u00edvel de equipe."
+      },
+      "severity": "critical",
+      "type": "expect_column_pair_values_a_to_be_greater_than_b"
+    },
+    {
+      "id": "29319ce2-d445-4eff-b9d7-da2bd0885ca2",
+      "kwargs": {
+        "column": "pontos",
+        "max_value": 1500.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Teto hist\u00f3rico de pontos de uma equipe por temporada."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "db4637fb-fc86-4f5f-822b-1f5b574e93f4",
+      "kwargs": {
+        "column_list": [
+          "season",
+          "constructor_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Gr\u00e3o do mart: uma linha por equipe por temporada."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "11e6a02f-38e2-4c02-bd31-c41836630129",
+      "kwargs": {
+        "column_A": "podios",
+        "column_B": "vitorias",
+        "or_equal": true
+      },
+      "meta": {
+        "descricao": "P\u00f3dios >= vit\u00f3rias tamb\u00e9m no n\u00edvel de equipe."
+      },
+      "severity": "critical",
+      "type": "expect_column_pair_values_a_to_be_greater_than_b"
+    },
+    {
+      "id": "227ff03c-94b6-4c67-ab3e-cca5855e0ff7",
+      "kwargs": {
+        "column": "pontos",
+        "max_value": 1500.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Teto hist\u00f3rico de pontos de uma equipe por temporada."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "2b4e0c61-270c-408c-b2d9-09fd07bb3f4c",
+  "meta": {
+    "great_expectations_version": "1.22.0"
+  },
+  "name": "gold_agg_constructor_season",
+  "notes": null
+}

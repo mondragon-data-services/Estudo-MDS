@@ -1,0 +1,190 @@
+{
+  "expectations": [
+    {
+      "id": "4c5b0fdc-b739-45db-a9cd-0c2c16957e11",
+      "kwargs": {
+        "column_list": [
+          "season",
+          "driver_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Gr\u00e3o do mart: uma linha por piloto por temporada."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "69fe9be6-5f6e-46a7-b121-b34097b63c17",
+      "kwargs": {
+        "column": "pontos",
+        "max_value": 1000.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Nenhum piloto somou mais de 1000 pontos numa temporada."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "0253723c-473d-4d14-8bc1-e8a7d78f5d3c",
+      "kwargs": {
+        "column": "vitorias",
+        "max_value": 30.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "N\u00e3o d\u00e1 para vencer mais corridas do que existem."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "b59e9605-1bbc-4e9f-9492-6cdb1fa69116",
+      "kwargs": {
+        "column_A": "podios",
+        "column_B": "vitorias",
+        "or_equal": true
+      },
+      "meta": {
+        "descricao": "Toda vit\u00f3ria tamb\u00e9m \u00e9 um p\u00f3dio: p\u00f3dios >= vit\u00f3rias. Esta \u00e9 a regra que pega erro de l\u00f3gica na agrega\u00e7\u00e3o."
+      },
+      "severity": "critical",
+      "type": "expect_column_pair_values_a_to_be_greater_than_b"
+    },
+    {
+      "id": "85b8cb15-05fa-444d-bfbb-09b11c3a779d",
+      "kwargs": {
+        "column_A": "corridas",
+        "column_B": "podios",
+        "or_equal": true
+      },
+      "meta": {
+        "descricao": "N\u00e3o se sobe ao p\u00f3dio em corrida que n\u00e3o se disputou."
+      },
+      "severity": "critical",
+      "type": "expect_column_pair_values_a_to_be_greater_than_b"
+    },
+    {
+      "id": "23a18a15-dd93-45cb-a495-baf65004ae59",
+      "kwargs": {
+        "column": "taxa_abandono_%",
+        "max_value": 100.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Percentual precisa ficar entre 0 e 100."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "f68af042-b1c1-47d1-8815-b3664194e24d",
+      "kwargs": {
+        "column": "piloto"
+      },
+      "meta": {
+        "descricao": "O mart \u00e9 consumido por humanos: o nome \u00e9 obrigat\u00f3rio."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "2fcc83d6-a7ef-4abf-bb3a-1b1187324899",
+      "kwargs": {
+        "column_list": [
+          "season",
+          "driver_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Gr\u00e3o do mart: uma linha por piloto por temporada."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "e2438b2a-393f-41ee-aa85-21b4ca688812",
+      "kwargs": {
+        "column": "pontos",
+        "max_value": 1000.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Nenhum piloto somou mais de 1000 pontos numa temporada."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "07dce00e-7415-444e-ac12-54d5e3ee8825",
+      "kwargs": {
+        "column": "vitorias",
+        "max_value": 30.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "N\u00e3o d\u00e1 para vencer mais corridas do que existem."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "8221ffc7-d583-4e49-bba2-8d2296b1de65",
+      "kwargs": {
+        "column_A": "podios",
+        "column_B": "vitorias",
+        "or_equal": true
+      },
+      "meta": {
+        "descricao": "Toda vit\u00f3ria tamb\u00e9m \u00e9 um p\u00f3dio: p\u00f3dios >= vit\u00f3rias. Esta \u00e9 a regra que pega erro de l\u00f3gica na agrega\u00e7\u00e3o."
+      },
+      "severity": "critical",
+      "type": "expect_column_pair_values_a_to_be_greater_than_b"
+    },
+    {
+      "id": "2a90bd27-c824-43bc-9011-530fd25a8d1b",
+      "kwargs": {
+        "column_A": "corridas",
+        "column_B": "podios",
+        "or_equal": true
+      },
+      "meta": {
+        "descricao": "N\u00e3o se sobe ao p\u00f3dio em corrida que n\u00e3o se disputou."
+      },
+      "severity": "critical",
+      "type": "expect_column_pair_values_a_to_be_greater_than_b"
+    },
+    {
+      "id": "d88017d0-c1b0-400d-80c9-a865f2c648da",
+      "kwargs": {
+        "column": "taxa_abandono_%",
+        "max_value": 100.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Percentual precisa ficar entre 0 e 100."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "cd79ad8b-835b-4176-aaac-2985ad1f17fe",
+      "kwargs": {
+        "column": "piloto"
+      },
+      "meta": {
+        "descricao": "O mart \u00e9 consumido por humanos: o nome \u00e9 obrigat\u00f3rio."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    }
+  ],
+  "id": "744307c5-38f1-4afd-afe6-86234d42fd4a",
+  "meta": {
+    "great_expectations_version": "1.22.0"
+  },
+  "name": "gold_agg_driver_season",
+  "notes": null
+}

@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "6b236a19-7c67-4b31-ac26-1ad1e26f3cb3",
+      "name": "gold_agg_driver_season"
+    },
+    "batch_definition": {
+      "id": "c8874b75-a9d7-463d-bda5-6ba8b559394f",
+      "name": "lote_completo"
+    },
+    "datasource": {
+      "id": "2b2ead13-4d51-4109-92fb-6ab6dae4a52e",
+      "name": "f1_pandas"
+    }
+  },
+  "id": "faed255b-018a-4583-b333-9996d5acf6b5",
+  "name": "vd_gold_agg_driver_season",
+  "suite": {
+    "id": "744307c5-38f1-4afd-afe6-86234d42fd4a",
+    "name": "gold_agg_driver_season"
+  }
+}

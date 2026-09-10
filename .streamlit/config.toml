@@ -1,0 +1,17 @@
+# Tema do app fixado em claro e alinhado à paleta usada nos gráficos.
+# Deixar o tema explícito evita que o app apareça diferente na máquina de cada
+# aluno — e garante que as cores dos gráficos foram validadas contra ESTE fundo.
+
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#f9f9f7"
+secondaryBackgroundColor = "#fcfcfb"
+textColor = "#0b0b0b"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

@@ -1,0 +1,62 @@
+{
+  "expectations": [
+    {
+      "id": "fa75daee-2ae1-49f4-8cc3-9676c2989fff",
+      "kwargs": {
+        "column_list": [
+          "season",
+          "driver_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Um piloto ocupa uma \u00fanica posi\u00e7\u00e3o por temporada."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "55de5f19-6898-4516-81c3-482495f36f7f",
+      "kwargs": {
+        "column_list": [
+          "season",
+          "position"
+        ]
+      },
+      "meta": {
+        "descricao": "N\u00e3o existem dois pilotos na mesma coloca\u00e7\u00e3o final."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "4eb3fd85-4f1a-47e8-bfc8-627ec52124c2",
+      "kwargs": {
+        "column": "points",
+        "regex": "^-?\\d+(\\.\\d+)?$"
+      },
+      "meta": {
+        "descricao": "Pontos do campeonato s\u00e3o num\u00e9ricos."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "ae4b0242-d72e-40fd-9f20-f6c415bb217a",
+      "kwargs": {
+        "column": "wins",
+        "regex": "^\\d+$"
+      },
+      "meta": {
+        "descricao": "N\u00famero de vit\u00f3rias \u00e9 inteiro."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    }
+  ],
+  "id": "85d45e15-36f9-4adf-943f-6a92629764bc",
+  "meta": {
+    "great_expectations_version": "1.22.0"
+  },
+  "name": "bronze_driver_standings",
+  "notes": null
+}

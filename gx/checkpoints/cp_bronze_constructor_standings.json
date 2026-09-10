@@ -1,0 +1,12 @@
+{
+  "actions": [],
+  "id": "1e1f2dae-226e-4260-8816-8d9435828fe0",
+  "name": "cp_bronze_constructor_standings",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "d1f67c22-0a69-4aa2-97d3-39fb0ee3d5c8",
+      "name": "vd_bronze_constructor_standings"
+    }
+  ]
+}

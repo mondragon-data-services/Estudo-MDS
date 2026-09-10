@@ -1,0 +1,194 @@
+{
+  "expectations": [
+    {
+      "id": "158eca0e-c50f-43bb-8a18-5ac006104790",
+      "kwargs": {
+        "column": "points",
+        "max_value": 26.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Um GP d\u00e1 no m\u00e1ximo 26 pontos (25 pela vit\u00f3ria + 1 pela volta mais r\u00e1pida)."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "62cd2d52-4cb2-4b55-bc3b-891a252d3ed1",
+      "kwargs": {
+        "column": "grid",
+        "max_value": 30.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Grid vai de 0 (largada do pit lane) a 30."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "e8e2091c-a551-49ba-b012-a52fa5f2582f",
+      "kwargs": {
+        "column": "position",
+        "max_value": 30.0,
+        "min_value": 1.0
+      },
+      "meta": {
+        "descricao": "Posi\u00e7\u00e3o de chegada vai de 1 a 30."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "886f37b1-32f6-4cf5-9807-a07bdb8770ab",
+      "kwargs": {
+        "column": "race_key"
+      },
+      "meta": {
+        "descricao": "A chave t\u00e9cnica temporada-rodada \u00e9 a liga\u00e7\u00e3o com dim_race."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "dfa1588a-6134-4d27-979c-3e2923f3b154",
+      "kwargs": {
+        "column_list": [
+          "race_key",
+          "driver_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Gr\u00e3o da tabela-fato: uma linha por piloto por corrida."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "99de1630-afe1-4507-8fea-15acc05fca96",
+      "kwargs": {
+        "column": "finalizou",
+        "value_set": [
+          true,
+          false
+        ]
+      },
+      "meta": {
+        "descricao": "A flag de conclus\u00e3o \u00e9 booleana de verdade."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "b98ad929-772f-4b49-8b49-2201bf3a2826",
+      "kwargs": {
+        "column": "laps",
+        "max_value": 200.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Nenhum GP moderno passa de 200 voltas."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "d5f58b78-3f32-46c3-ac32-42a95678209a",
+      "kwargs": {
+        "column": "points",
+        "max_value": 26.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Um GP d\u00e1 no m\u00e1ximo 26 pontos (25 pela vit\u00f3ria + 1 pela volta mais r\u00e1pida)."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "477a1f21-6e9f-4381-9422-c447a3166e08",
+      "kwargs": {
+        "column": "grid",
+        "max_value": 30.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Grid vai de 0 (largada do pit lane) a 30."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "1db80b1e-1965-447e-a44f-5a895c5c1d0f",
+      "kwargs": {
+        "column": "position",
+        "max_value": 30.0,
+        "min_value": 1.0
+      },
+      "meta": {
+        "descricao": "Posi\u00e7\u00e3o de chegada vai de 1 a 30."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "c84149da-7db2-4d12-93a6-7e2791279400",
+      "kwargs": {
+        "column": "race_key"
+      },
+      "meta": {
+        "descricao": "A chave t\u00e9cnica temporada-rodada \u00e9 a liga\u00e7\u00e3o com dim_race."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "44d01a9f-f622-47f6-a9eb-672f2f7beac4",
+      "kwargs": {
+        "column_list": [
+          "race_key",
+          "driver_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Gr\u00e3o da tabela-fato: uma linha por piloto por corrida."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "252d0dea-59fc-447b-a54c-2196f79f04de",
+      "kwargs": {
+        "column": "finalizou",
+        "value_set": [
+          true,
+          false
+        ]
+      },
+      "meta": {
+        "descricao": "A flag de conclus\u00e3o \u00e9 booleana de verdade."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "ea6fb5ff-9fa4-48ee-a990-9a78f5eff02c",
+      "kwargs": {
+        "column": "laps",
+        "max_value": 200.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "descricao": "Nenhum GP moderno passa de 200 voltas."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "35b90ebe-37fa-4284-b408-a07c8506f4e3",
+  "meta": {
+    "great_expectations_version": "1.22.0"
+  },
+  "name": "silver_fact_result",
+  "notes": null
+}

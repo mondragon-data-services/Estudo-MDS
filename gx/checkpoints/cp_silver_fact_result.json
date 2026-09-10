@@ -1,0 +1,12 @@
+{
+  "actions": [],
+  "id": "87b5fd92-17ef-4a74-9d02-2a93cb5bbe90",
+  "name": "cp_silver_fact_result",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "d7e2e417-a25c-4e36-9de8-c795d9310fbf",
+      "name": "vd_silver_fact_result"
+    }
+  ]
+}

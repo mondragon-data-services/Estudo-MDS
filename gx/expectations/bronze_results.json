@@ -1,0 +1,178 @@
+{
+  "expectations": [
+    {
+      "id": "7b9cb739-87bb-42e7-8794-7c082bbbdf63",
+      "kwargs": {
+        "column_set": [
+          "season",
+          "round",
+          "driver_id",
+          "constructor_id",
+          "grid",
+          "position",
+          "position_text",
+          "points",
+          "laps",
+          "status"
+        ],
+        "exact_match": false
+      },
+      "meta": {
+        "descricao": "O contrato de colunas da fonte n\u00e3o mudou."
+      },
+      "severity": "critical",
+      "type": "expect_table_columns_to_match_set"
+    },
+    {
+      "id": "88cfa9bc-27ee-4527-bed7-b0a9ed4b3d46",
+      "kwargs": {
+        "max_value": 3000,
+        "min_value": 100
+      },
+      "meta": {
+        "descricao": "No m\u00e1ximo ~25 pilotos por GP em at\u00e9 30 GPs por temporada."
+      },
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    },
+    {
+      "id": "c0e5337d-cd1e-462b-8f85-2f61a0cc0039",
+      "kwargs": {
+        "column_list": [
+          "season",
+          "round",
+          "driver_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Um piloto aparece uma \u00fanica vez por corrida \u2014 se duplicar, houve reprocessamento indevido da ingest\u00e3o."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "2428727a-9b60-4246-b504-ee9037475cd7",
+      "kwargs": {
+        "column": "driver_id"
+      },
+      "meta": {
+        "descricao": "Sem piloto n\u00e3o existe resultado."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "9834ac0a-4412-4f93-9c9d-f529465ffa59",
+      "kwargs": {
+        "column": "constructor_id"
+      },
+      "meta": {
+        "descricao": "Todo piloto corre por uma equipe."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "5aa2783f-be23-42fd-9a65-42f9678a9a96",
+      "kwargs": {
+        "column": "points",
+        "regex": "^-?\\d+(\\.\\d+)?$"
+      },
+      "meta": {
+        "descricao": "Pontos s\u00e3o num\u00e9ricos (podem ter meio ponto)."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "bf005b32-d59d-4398-b065-7cddb6aa4570",
+      "kwargs": {
+        "column": "grid",
+        "regex": "^\\d+$"
+      },
+      "meta": {
+        "descricao": "Posi\u00e7\u00e3o de largada \u00e9 inteira (0 = largou do pit)."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "fedcd560-5f3b-4e69-9c7d-ee7c603a05d4",
+      "kwargs": {
+        "column": "position",
+        "regex": "^\\d+$"
+      },
+      "meta": {
+        "descricao": "Posi\u00e7\u00e3o de chegada \u00e9 inteira."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "d2beaddd-a560-40ef-bd10-6c6f1dd7c692",
+      "kwargs": {
+        "column": "status"
+      },
+      "meta": {
+        "descricao": "O status ('Finished', '+1 Lap', 'Engine'...) explica o resultado e \u00e9 obrigat\u00f3rio."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "65ded616-76a2-4deb-970e-143c0bc3e187",
+      "kwargs": {
+        "column": "position_text",
+        "value_set": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "R",
+          "D",
+          "E",
+          "W",
+          "F",
+          "N"
+        ]
+      },
+      "meta": {
+        "descricao": "position_text traz a posi\u00e7\u00e3o OU um c\u00f3digo de n\u00e3o classificado (R=abandono, D=desclassificado, W=desistiu...)."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    }
+  ],
+  "id": "92e1e83b-3f94-4216-b089-1b6b8356e2dd",
+  "meta": {
+    "great_expectations_version": "1.22.0"
+  },
+  "name": "bronze_results",
+  "notes": null
+}

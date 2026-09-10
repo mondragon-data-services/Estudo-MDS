@@ -1,0 +1,12 @@
+{
+  "actions": [],
+  "id": "3d3fabad-007b-4879-a580-7cf856632b77",
+  "name": "cp_gold_agg_driver_season",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "faed255b-018a-4583-b333-9996d5acf6b5",
+      "name": "vd_gold_agg_driver_season"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "actions": [],
+  "id": "bc7ea3b8-5169-4758-a875-dbf6912cc40c",
+  "name": "cp_bronze_driver_standings",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "55b68edc-dcf8-489a-adf6-9cf348a3eee6",
+      "name": "vd_bronze_driver_standings"
+    }
+  ]
+}

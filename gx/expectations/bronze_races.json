@@ -1,0 +1,120 @@
+{
+  "expectations": [
+    {
+      "id": "45bb521a-2109-4990-9328-993f4cf070b2",
+      "kwargs": {
+        "column_set": [
+          "season",
+          "round",
+          "race_name",
+          "date",
+          "circuit_id",
+          "circuit_name",
+          "locality",
+          "country"
+        ],
+        "exact_match": false
+      },
+      "meta": {
+        "descricao": "O schema da fonte cont\u00e9m todas as colunas esperadas."
+      },
+      "severity": "critical",
+      "type": "expect_table_columns_to_match_set"
+    },
+    {
+      "id": "32a7b72e-ce27-400c-a53b-bef71c3576c0",
+      "kwargs": {
+        "max_value": 120,
+        "min_value": 10
+      },
+      "meta": {
+        "descricao": "Uma temporada de F1 tem entre 10 e 30 corridas; volume fora disso indica carga incompleta ou duplicada."
+      },
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    },
+    {
+      "id": "705accc4-86b9-42b4-a7c2-e0774d29dc00",
+      "kwargs": {
+        "column_list": [
+          "season",
+          "round"
+        ]
+      },
+      "meta": {
+        "descricao": "A chave de neg\u00f3cio (temporada, rodada) n\u00e3o pode se repetir."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "3fa2ccfc-6147-43eb-9e25-bfe5a93b31ff",
+      "kwargs": {
+        "column": "race_name"
+      },
+      "meta": {
+        "descricao": "Todo GP precisa de nome."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "69141028-7358-4aa8-aa23-9020fd570254",
+      "kwargs": {
+        "column": "date",
+        "regex": "^\\d{4}-\\d{2}-\\d{2}$"
+      },
+      "meta": {
+        "descricao": "A data do GP vem no formato ISO AAAA-MM-DD."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "81c61dc6-831c-4258-89db-5afc5741fe01",
+      "kwargs": {
+        "column": "round",
+        "regex": "^\\d+$"
+      },
+      "meta": {
+        "descricao": "A rodada \u00e9 um inteiro (ainda como texto no bronze)."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_match_regex"
+    },
+    {
+      "id": "4d1d9cfb-9995-4f73-9867-20c458b942ab",
+      "kwargs": {
+        "column": "season",
+        "value_set": [
+          "2021",
+          "2022",
+          "2023",
+          "2024"
+        ]
+      },
+      "meta": {
+        "descricao": "S\u00f3 devem existir as temporadas que pedimos na ingest\u00e3o."
+      },
+      "severity": "critical",
+      "type": "expect_column_distinct_values_to_be_in_set"
+    },
+    {
+      "id": "abe9cb9a-e474-452c-a3e1-2c9d8930d384",
+      "kwargs": {
+        "column": "circuit_id"
+      },
+      "meta": {
+        "descricao": "Toda corrida acontece em um circuito conhecido."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    }
+  ],
+  "id": "9639ec31-1283-46bf-bdb3-2b96d9b9aad2",
+  "meta": {
+    "great_expectations_version": "1.22.0"
+  },
+  "name": "bronze_races",
+  "notes": null
+}

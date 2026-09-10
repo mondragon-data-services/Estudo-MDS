@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "bb55cd6d-d261-446d-acb4-9a531235a3fe",
+      "name": "bronze_driver_standings"
+    },
+    "batch_definition": {
+      "id": "b2a0a4fd-b95b-4a78-8ea5-df569e05ff35",
+      "name": "lote_completo"
+    },
+    "datasource": {
+      "id": "2b2ead13-4d51-4109-92fb-6ab6dae4a52e",
+      "name": "f1_pandas"
+    }
+  },
+  "id": "55b68edc-dcf8-489a-adf6-9cf348a3eee6",
+  "name": "vd_bronze_driver_standings",
+  "suite": {
+    "id": "85d45e15-36f9-4adf-943f-6a92629764bc",
+    "name": "bronze_driver_standings"
+  }
+}

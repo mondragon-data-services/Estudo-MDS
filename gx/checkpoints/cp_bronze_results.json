@@ -1,0 +1,12 @@
+{
+  "actions": [],
+  "id": "b6377637-a45b-4589-b9da-4477c38ecf8d",
+  "name": "cp_bronze_results",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "90249344-f5dd-472c-ba58-5354d6a3c769",
+      "name": "vd_bronze_results"
+    }
+  ]
+}

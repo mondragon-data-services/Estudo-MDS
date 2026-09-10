@@ -1,0 +1,12 @@
+{
+  "actions": [],
+  "id": "8dd73281-2ade-49ba-9f74-733014667a1d",
+  "name": "cp_bronze_pit_stops",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "ec113004-45db-49f1-9e0d-fa0396ed1cf2",
+      "name": "vd_bronze_pit_stops"
+    }
+  ]
+}

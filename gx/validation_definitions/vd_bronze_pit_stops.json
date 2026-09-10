@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "fb6cbb5c-f8cc-4c97-8a3c-af682e4c62e7",
+      "name": "bronze_pit_stops"
+    },
+    "batch_definition": {
+      "id": "c863561a-5f49-497f-a579-ee712a37b211",
+      "name": "lote_completo"
+    },
+    "datasource": {
+      "id": "2b2ead13-4d51-4109-92fb-6ab6dae4a52e",
+      "name": "f1_pandas"
+    }
+  },
+  "id": "ec113004-45db-49f1-9e0d-fa0396ed1cf2",
+  "name": "vd_bronze_pit_stops",
+  "suite": {
+    "id": "57687931-994f-4988-ade8-93d6a7272111",
+    "name": "bronze_pit_stops"
+  }
+}

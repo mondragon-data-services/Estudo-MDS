@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "id": "75a5fde1-5971-4236-a988-97eee3db9e5e",
+      "kwargs": {
+        "column_list": [
+          "race_key",
+          "driver_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Gr\u00e3o: uma linha por piloto por classifica\u00e7\u00e3o."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "43fc439d-2873-48c0-b0db-558a7f5a0615",
+      "kwargs": {
+        "column": "melhor_tempo_s",
+        "max_value": 180.0,
+        "min_value": 50.0,
+        "mostly": 0.99
+      },
+      "meta": {
+        "descricao": "Uma volta de classifica\u00e7\u00e3o leva entre 50s (Red Bull Ring) e 180s (Spa em pista molhada)."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "c7a0e908-4643-4d1c-b1af-e28855a09796",
+      "kwargs": {
+        "column": "posicao_grid",
+        "max_value": 30.0,
+        "min_value": 1.0
+      },
+      "meta": {
+        "descricao": "Posi\u00e7\u00e3o na classifica\u00e7\u00e3o vai de 1 a 30."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "f000e801-62fe-47d4-ab30-9f522dfffab5",
+      "kwargs": {
+        "column_list": [
+          "race_key",
+          "driver_id"
+        ]
+      },
+      "meta": {
+        "descricao": "Gr\u00e3o: uma linha por piloto por classifica\u00e7\u00e3o."
+      },
+      "severity": "critical",
+      "type": "expect_compound_columns_to_be_unique"
+    },
+    {
+      "id": "0e72b60c-89e1-485e-ab34-a6da5b7730b1",
+      "kwargs": {
+        "column": "melhor_tempo_s",
+        "max_value": 180.0,
+        "min_value": 50.0,
+        "mostly": 0.99
+      },
+      "meta": {
+        "descricao": "Uma volta de classifica\u00e7\u00e3o leva entre 50s (Red Bull Ring) e 180s (Spa em pista molhada)."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "c93a32c2-0092-4b3e-8b80-83b28bd59020",
+      "kwargs": {
+        "column": "posicao_grid",
+        "max_value": 30.0,
+        "min_value": 1.0
+      },
+      "meta": {
+        "descricao": "Posi\u00e7\u00e3o na classifica\u00e7\u00e3o vai de 1 a 30."
+      },
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    }
+  ],
+  "id": "af1732d9-7447-4228-916a-4a2b4fa518b3",
+  "meta": {
+    "great_expectations_version": "1.22.0"
+  },
+  "name": "silver_fact_qualifying",
+  "notes": null
+}

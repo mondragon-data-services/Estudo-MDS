@@ -1,0 +1,12 @@
+{
+  "actions": [],
+  "id": "e1d2318d-0509-462b-be20-3d015ec4b9dc",
+  "name": "cp_bronze_races",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "bd89b34a-4068-48f4-8fda-f0bece784df2",
+      "name": "vd_bronze_races"
+    }
+  ]
+}

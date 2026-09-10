@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "0e72d6be-0135-4613-8a23-0513f5f3dc69",
+      "name": "gold_agg_constructor_season"
+    },
+    "batch_definition": {
+      "id": "ace38385-042d-4bbe-b26c-eeeb1439d7f0",
+      "name": "lote_completo"
+    },
+    "datasource": {
+      "id": "2b2ead13-4d51-4109-92fb-6ab6dae4a52e",
+      "name": "f1_pandas"
+    }
+  },
+  "id": "eda92dd0-bcd9-4b51-bc8d-acf20225bb0d",
+  "name": "vd_gold_agg_constructor_season",
+  "suite": {
+    "id": "2b4e0c61-270c-408c-b2d9-09fd07bb3f4c",
+    "name": "gold_agg_constructor_season"
+  }
+}

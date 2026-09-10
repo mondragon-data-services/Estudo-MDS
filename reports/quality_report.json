@@ -1,0 +1,604 @@
+{
+  "etapa": "validacao_bronze",
+  "gerado_em": "2026-09-10T17:05:16+00:00",
+  "sucesso_geral": true,
+  "tabelas_validadas": 6,
+  "regras_executadas": 35,
+  "regras_reprovadas": 0,
+  "resultados": [
+    {
+      "tabela": "bronze_races",
+      "suite": "bronze_races",
+      "sucesso": true,
+      "total_regras": 8,
+      "regras_ok": 8,
+      "regras_falhas": 0,
+      "taxa_sucesso": 100.0,
+      "linhas_avaliadas": 90,
+      "validado_em": "2026-09-10T17:04:49+00:00",
+      "detalhes": [
+        {
+          "regra": "expect_table_columns_to_match_set",
+          "coluna": "(tabela inteira)",
+          "descricao": "O schema da fonte contém todas as colunas esperadas.",
+          "sucesso": true,
+          "linhas_avaliadas": 90,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "column_set": [
+              "season",
+              "round",
+              "race_name",
+              "date",
+              "circuit_id",
+              "circuit_name",
+              "locality",
+              "country"
+            ],
+            "exact_match": false
+          }
+        },
+        {
+          "regra": "expect_table_row_count_to_be_between",
+          "coluna": "(tabela inteira)",
+          "descricao": "Uma temporada de F1 tem entre 10 e 30 corridas; volume fora disso indica carga incompleta ou duplicada.",
+          "sucesso": true,
+          "linhas_avaliadas": 90,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "min_value": 10,
+            "max_value": 120
+          }
+        },
+        {
+          "regra": "expect_compound_columns_to_be_unique",
+          "coluna": "season, round",
+          "descricao": "A chave de negócio (temporada, rodada) não pode se repetir.",
+          "sucesso": true,
+          "linhas_avaliadas": 90,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_not_be_null",
+          "coluna": "race_name",
+          "descricao": "Todo GP precisa de nome.",
+          "sucesso": true,
+          "linhas_avaliadas": 90,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "date",
+          "descricao": "A data do GP vem no formato ISO AAAA-MM-DD.",
+          "sucesso": true,
+          "linhas_avaliadas": 90,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "regex": "^\\d{4}-\\d{2}-\\d{2}$"
+          }
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "round",
+          "descricao": "A rodada é um inteiro (ainda como texto no bronze).",
+          "sucesso": true,
+          "linhas_avaliadas": 90,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "regex": "^\\d+$"
+          }
+        },
+        {
+          "regra": "expect_column_distinct_values_to_be_in_set",
+          "coluna": "season",
+          "descricao": "Só devem existir as temporadas que pedimos na ingestão.",
+          "sucesso": true,
+          "linhas_avaliadas": 90,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "value_set": [
+              "2021",
+              "2022",
+              "2023",
+              "2024"
+            ]
+          }
+        },
+        {
+          "regra": "expect_column_values_to_not_be_null",
+          "coluna": "circuit_id",
+          "descricao": "Toda corrida acontece em um circuito conhecido.",
+          "sucesso": true,
+          "linhas_avaliadas": 90,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        }
+      ]
+    },
+    {
+      "tabela": "bronze_results",
+      "suite": "bronze_results",
+      "sucesso": true,
+      "total_regras": 10,
+      "regras_ok": 10,
+      "regras_falhas": 0,
+      "taxa_sucesso": 100.0,
+      "linhas_avaliadas": 1799,
+      "validado_em": "2026-09-10T17:04:50+00:00",
+      "detalhes": [
+        {
+          "regra": "expect_table_columns_to_match_set",
+          "coluna": "(tabela inteira)",
+          "descricao": "O contrato de colunas da fonte não mudou.",
+          "sucesso": true,
+          "linhas_avaliadas": 1799,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "column_set": [
+              "season",
+              "round",
+              "driver_id",
+              "constructor_id",
+              "grid",
+              "position",
+              "position_text",
+              "points",
+              "laps",
+              "status"
+            ],
+            "exact_match": false
+          }
+        },
+        {
+          "regra": "expect_table_row_count_to_be_between",
+          "coluna": "(tabela inteira)",
+          "descricao": "No máximo ~25 pilotos por GP em até 30 GPs por temporada.",
+          "sucesso": true,
+          "linhas_avaliadas": 1799,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "min_value": 100,
+            "max_value": 3000
+          }
+        },
+        {
+          "regra": "expect_compound_columns_to_be_unique",
+          "coluna": "season, round, driver_id",
+          "descricao": "Um piloto aparece uma única vez por corrida — se duplicar, houve reprocessamento indevido da ingestão.",
+          "sucesso": true,
+          "linhas_avaliadas": 1799,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_not_be_null",
+          "coluna": "driver_id",
+          "descricao": "Sem piloto não existe resultado.",
+          "sucesso": true,
+          "linhas_avaliadas": 1799,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_not_be_null",
+          "coluna": "constructor_id",
+          "descricao": "Todo piloto corre por uma equipe.",
+          "sucesso": true,
+          "linhas_avaliadas": 1799,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "points",
+          "descricao": "Pontos são numéricos (podem ter meio ponto).",
+          "sucesso": true,
+          "linhas_avaliadas": 1799,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "regex": "^-?\\d+(\\.\\d+)?$"
+          }
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "grid",
+          "descricao": "Posição de largada é inteira (0 = largou do pit).",
+          "sucesso": true,
+          "linhas_avaliadas": 1799,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "regex": "^\\d+$"
+          }
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "position",
+          "descricao": "Posição de chegada é inteira.",
+          "sucesso": true,
+          "linhas_avaliadas": 1799,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "regex": "^\\d+$"
+          }
+        },
+        {
+          "regra": "expect_column_values_to_not_be_null",
+          "coluna": "status",
+          "descricao": "O status ('Finished', '+1 Lap', 'Engine'...) explica o resultado e é obrigatório.",
+          "sucesso": true,
+          "linhas_avaliadas": 1799,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_be_in_set",
+          "coluna": "position_text",
+          "descricao": "position_text traz a posição OU um código de não classificado (R=abandono, D=desclassificado, W=desistiu...).",
+          "sucesso": true,
+          "linhas_avaliadas": 1799,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "value_set": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "30",
+              "R",
+              "D",
+              "E",
+              "W",
+              "F",
+              "N"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "tabela": "bronze_qualifying",
+      "suite": "bronze_qualifying",
+      "sucesso": true,
+      "total_regras": 6,
+      "regras_ok": 6,
+      "regras_falhas": 0,
+      "taxa_sucesso": 100.0,
+      "linhas_avaliadas": 1798,
+      "validado_em": "2026-09-10T17:04:50+00:00",
+      "detalhes": [
+        {
+          "regra": "expect_table_columns_to_match_set",
+          "coluna": "(tabela inteira)",
+          "descricao": "O contrato de colunas da classificação não mudou.",
+          "sucesso": true,
+          "linhas_avaliadas": 1798,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "column_set": [
+              "season",
+              "round",
+              "driver_id",
+              "constructor_id",
+              "position",
+              "q1",
+              "q2",
+              "q3"
+            ],
+            "exact_match": false
+          }
+        },
+        {
+          "regra": "expect_compound_columns_to_be_unique",
+          "coluna": "season, round, driver_id",
+          "descricao": "Um piloto tem um único resultado de classificação.",
+          "sucesso": true,
+          "linhas_avaliadas": 1798,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "position",
+          "descricao": "Posição no grid provisório é inteira.",
+          "sucesso": true,
+          "linhas_avaliadas": 1798,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "regex": "^\\d+$"
+          }
+        },
+        {
+          "regra": "expect_column_values_to_not_be_null",
+          "coluna": "driver_id",
+          "descricao": "Sem piloto não existe volta de classificação.",
+          "sucesso": true,
+          "linhas_avaliadas": 1798,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "q1",
+          "descricao": "Tempo de Q1 no formato m:ss.mmm. Toleramos 10% de exceções porque quem não marca tempo fica sem registro.",
+          "sucesso": true,
+          "linhas_avaliadas": 1798,
+          "linhas_inesperadas": 20,
+          "percentual_inesperado": 1.112,
+          "exemplos": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "parametros": {
+            "mostly": 0.9,
+            "regex": "^\\d+:\\d{2}\\.\\d{3}$"
+          }
+        },
+        {
+          "regra": "expect_column_values_to_not_be_null",
+          "coluna": "q1",
+          "descricao": "Quase todo piloto marca tempo no Q1 — 'mostly' é como o GX expressa uma tolerância explícita.",
+          "sucesso": true,
+          "linhas_avaliadas": 1798,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "mostly": 0.95
+          }
+        }
+      ]
+    },
+    {
+      "tabela": "bronze_pit_stops",
+      "suite": "bronze_pit_stops",
+      "sucesso": true,
+      "total_regras": 4,
+      "regras_ok": 4,
+      "regras_falhas": 0,
+      "taxa_sucesso": 100.0,
+      "linhas_avaliadas": 3340,
+      "validado_em": "2026-09-10T17:04:50+00:00",
+      "detalhes": [
+        {
+          "regra": "expect_table_columns_to_match_set",
+          "coluna": "(tabela inteira)",
+          "descricao": "O contrato de colunas das paradas não mudou.",
+          "sucesso": true,
+          "linhas_avaliadas": 3340,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "column_set": [
+              "season",
+              "round",
+              "driver_id",
+              "stop",
+              "lap",
+              "duration"
+            ],
+            "exact_match": false
+          }
+        },
+        {
+          "regra": "expect_compound_columns_to_be_unique",
+          "coluna": "season, round, driver_id, stop",
+          "descricao": "Cada parada (1ª, 2ª, 3ª...) de um piloto é registrada uma vez.",
+          "sucesso": true,
+          "linhas_avaliadas": 3340,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "lap",
+          "descricao": "O número da volta é inteiro.",
+          "sucesso": true,
+          "linhas_avaliadas": 3340,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "regex": "^\\d+$"
+          }
+        },
+        {
+          "regra": "expect_column_values_to_not_be_null",
+          "coluna": "duration",
+          "descricao": "Toda parada tem duração medida.",
+          "sucesso": true,
+          "linhas_avaliadas": 3340,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        }
+      ]
+    },
+    {
+      "tabela": "bronze_driver_standings",
+      "suite": "bronze_driver_standings",
+      "sucesso": true,
+      "total_regras": 4,
+      "regras_ok": 4,
+      "regras_falhas": 0,
+      "taxa_sucesso": 100.0,
+      "linhas_avaliadas": 89,
+      "validado_em": "2026-09-10T17:04:51+00:00",
+      "detalhes": [
+        {
+          "regra": "expect_compound_columns_to_be_unique",
+          "coluna": "season, driver_id",
+          "descricao": "Um piloto ocupa uma única posição por temporada.",
+          "sucesso": true,
+          "linhas_avaliadas": 89,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_compound_columns_to_be_unique",
+          "coluna": "season, position",
+          "descricao": "Não existem dois pilotos na mesma colocação final.",
+          "sucesso": true,
+          "linhas_avaliadas": 89,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "points",
+          "descricao": "Pontos do campeonato são numéricos.",
+          "sucesso": true,
+          "linhas_avaliadas": 89,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "regex": "^-?\\d+(\\.\\d+)?$"
+          }
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "wins",
+          "descricao": "Número de vitórias é inteiro.",
+          "sucesso": true,
+          "linhas_avaliadas": 89,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "regex": "^\\d+$"
+          }
+        }
+      ]
+    },
+    {
+      "tabela": "bronze_constructor_standings",
+      "suite": "bronze_constructor_standings",
+      "sucesso": true,
+      "total_regras": 3,
+      "regras_ok": 3,
+      "regras_falhas": 0,
+      "taxa_sucesso": 100.0,
+      "linhas_avaliadas": 40,
+      "validado_em": "2026-09-10T17:04:51+00:00",
+      "detalhes": [
+        {
+          "regra": "expect_compound_columns_to_be_unique",
+          "coluna": "season, constructor_id",
+          "descricao": "Uma equipe ocupa uma única posição por temporada.",
+          "sucesso": true,
+          "linhas_avaliadas": 40,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        },
+        {
+          "regra": "expect_column_values_to_match_regex",
+          "coluna": "points",
+          "descricao": "Pontos do campeonato de construtores são numéricos.",
+          "sucesso": true,
+          "linhas_avaliadas": 40,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {
+            "regex": "^-?\\d+(\\.\\d+)?$"
+          }
+        },
+        {
+          "regra": "expect_column_values_to_not_be_null",
+          "coluna": "constructor_name",
+          "descricao": "Toda equipe tem nome.",
+          "sucesso": true,
+          "linhas_avaliadas": 40,
+          "linhas_inesperadas": 0,
+          "percentual_inesperado": 0.0,
+          "exemplos": [],
+          "parametros": {}
+        }
+      ]
+    }
+  ]
+}

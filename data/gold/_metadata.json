@@ -1,0 +1,17 @@
+{
+  "gerado_em": "2026-09-05T01:07:49+00:00",
+  "temporadas": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "tabelas": {
+    "agg_driver_season": 89,
+    "agg_constructor_season": 40,
+    "agg_race_summary": 90,
+    "agg_championship_progression": 2006,
+    "agg_circuit_stats": 28,
+    "agg_teammate_battle": 90
+  }
+}
