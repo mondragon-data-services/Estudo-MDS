@@ -1,4 +1,4 @@
-# 🏁 Engenharia de Dados na prática: as três fases de um pipeline
+# 🏁 Aula 01 — Engenharia de Dados na prática: as três fases de um pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Great Expectations](https://img.shields.io/badge/Great%20Expectations-1.x-ff6310)
@@ -41,11 +41,11 @@ analítico que qualquer pessoa consegue usar.
 
 ## Começando
 
-Pré-requisito: **Python 3.10 ou superior**.
+Pré-requisito: **Python 3.10 ou superior**. Esta aula **não** usa o SQL Server.
 
 ```bash
 git clone https://github.com/mondragon-data-services/Estudo-MDS.git
-cd Estudo-MDS
+cd Estudo-MDS/aulas/01-engenharia-de-dados-f1
 
 python -m venv .venv
 .venv\Scripts\activate          # Windows
@@ -60,6 +60,9 @@ Ou, se preferir, use o script pronto — ele também registra o kernel do Jupyte
 .\scripts\setup.ps1             # Windows (PowerShell)
 bash scripts/setup.sh           # Linux / macOS
 ```
+
+> Todos os comandos abaixo são executados **de dentro da pasta da aula**
+> (`aulas/01-engenharia-de-dados-f1`).
 
 ### Rodar o pipeline inteiro (≈ 3 minutos)
 
