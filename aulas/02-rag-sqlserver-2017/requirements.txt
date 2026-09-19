@@ -1,0 +1,7 @@
+# Instale de DENTRO da pasta da aula:  pip install -r requirements.txt
+-e ../../comum               # mds_comum: conexão com o SQL Server compartilhado (traz pyodbc e python-dotenv)
+numpy>=1.26
+pandas>=2.2
+sentence-transformers>=3.0
+streamlit>=1.36
+ipykernel>=6.29
