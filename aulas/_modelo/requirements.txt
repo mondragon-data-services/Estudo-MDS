@@ -1,0 +1,5 @@
+# Instale de DENTRO da pasta da aula:  pip install -r requirements.txt
+-e ../../comum               # conexão com o SQL Server compartilhado; apague se a aula não usa banco
+pandas>=2.2
+streamlit>=1.36
+ipykernel>=6.29
