@@ -1,0 +1,16 @@
+# ---------------------------------------------------------------------------
+# Ambiente ÚNICO do repositório: uma .venv na raiz serve a todas as aulas.
+#
+# Por que um só? O VS Code encontra sozinho a .venv da raiz do workspace e a
+# oferece como kernel dos notebooks. Uma .venv escondida dentro de cada aula
+# não aparece na lista — e aula é lugar de ensinar dados, não de caçar kernel.
+#
+# Instalação (na raiz):  .\scripts\preparar-ambiente.ps1   ou   bash scripts/preparar-ambiente.sh
+# Aula nova? Acrescente uma linha "-r aulas/<aula>/requirements.txt" abaixo.
+# ---------------------------------------------------------------------------
+
+-e ./comum                                        # mds_comum: conexão com o SQL Server
+-r aulas/01-engenharia-de-dados-f1/requirements.txt
+-r aulas/02-rag-sqlserver-2022/requirements.txt
+
+nbconvert>=7.16          # executar notebooks pela linha de comando (testes)

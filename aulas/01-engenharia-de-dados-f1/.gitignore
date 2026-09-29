@@ -23,3 +23,10 @@
 # Quer publicar no GitHub Pages? Comente a linha abaixo e faça o commit da pasta.
 /docs/data_docs/*
 !/docs/data_docs/.gitkeep
+
+# Artefatos que os NOTEBOOKS criam para a demonstração ao vivo (o portão de
+# qualidade, o dado corrompido de propósito e o exemplo do notebook 02). Não
+# fazem parte do pipeline: são recriados a cada aula e só poluiriam o diff.
+/gx/**/demo_*.json
+/gx/**/*_portao.json
+/gx/**/*_corrompido.json

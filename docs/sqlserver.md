@@ -61,8 +61,13 @@ sqlserver.conectar().execute("SELECT @@VERSION").fetchone()
 
 ## Versão do SQL Server
 
-As aulas são escritas para rodar em **SQL Server 2017 ou mais novo**: nada do
-que usamos exige recurso recente. A instância local é 2022 — funciona igual.
+As aulas usam o **SQL Server 2022** (versão 16) da instância local e podem
+aproveitar recursos dele, como o `GENERATE_SERIES`. Para isso o banco da aula
+precisa do **nível de compatibilidade 160** — bancos novos já nascem assim, e o
+notebook de criação de cada aula garante isso com
+`ALTER DATABASE ... SET COMPATIBILITY_LEVEL = 160`.
+
+Tem uma versão mais antiga? Instale o SQL Server 2022 Developer (abaixo).
 
 ## Não tem SQL Server instalado?
 

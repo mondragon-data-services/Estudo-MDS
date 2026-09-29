@@ -3,7 +3,8 @@ O coração da aula: como guardar e comparar embeddings SEM o tipo VECTOR.
 
 Ideia: um embedding é só uma lista de floats. Cada float32 ocupa 4 bytes.
 Então 384 floats viram exatamente 384 x 4 = 1536 bytes -> cabe num VARBINARY.
-O SQL Server 2017 guarda os bytes; o Python (NumPy) faz a matemática.
+O SQL Server 2022 guarda os bytes; o Python (NumPy) faz a matemática.
+(A mesma conta também roda no banco: veja rag.fn_VetorParaLinhas, notebook 01.)
 """
 import numpy as np
 

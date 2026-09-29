@@ -1,0 +1,14 @@
+# Tema do app fixado em claro: as cores dos gráficos do "Mapa das embeddings"
+# foram validadas contra ESTE fundo. Sem isto, o app segue o tema do sistema
+# de cada aluno e as cores podem perder contraste.
+
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#f9f9f7"
+secondaryBackgroundColor = "#fcfcfb"
+textColor = "#0b0b0b"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false

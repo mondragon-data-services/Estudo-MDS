@@ -10,7 +10,12 @@ from . import config
 
 
 def conectar(database: str | None = None, autocommit: bool = False) -> pyodbc.Connection:
-    """Abre conexão com o SQL Server. database=None conecta no master."""
+    """Abre conexão com o SQL Server. database=None conecta no master.
+
+    O logon espera até SQL_LOGIN_TIMEOUT segundos (padrão 60; o driver sozinho
+    desiste em 15). Numa máquina com pouca RAM livre, o Windows pagina a memória
+    do SQL Server para o disco e o primeiro logon pode demorar bem mais que o normal.
+    """
     cfg = config.sqlserver()
     if cfg.autenticacao_windows:
         credenciais = "Trusted_Connection=yes;"      # usuário logado no Windows
@@ -23,7 +28,7 @@ def conectar(database: str | None = None, autocommit: bool = False) -> pyodbc.Co
         f"DATABASE={database or 'master'};"
         "TrustServerCertificate=yes;Encrypt=no;"
     )
-    return pyodbc.connect(cs, autocommit=autocommit)
+    return pyodbc.connect(cs, autocommit=autocommit, timeout=cfg.tempo_logon)
 
 
 def executar_script(conn: pyodbc.Connection, script: str) -> None:

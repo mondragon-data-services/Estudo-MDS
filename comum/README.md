@@ -1,7 +1,7 @@
 # mds_comum — código compartilhado entre as aulas
 
-Pacote pequeno, instalado em modo editável na `.venv` de cada aula que usa o
-SQL Server. Ele existe para que a conexão com o banco seja **escrita uma vez**:
+Pacote pequeno, instalado em modo editável na `.venv` da raiz (ambiente único
+de todas as aulas). Ele existe para que a conexão com o banco seja **escrita uma vez**:
 toda aula nova só precisa escolher o nome do seu banco.
 
 ```text
@@ -12,13 +12,8 @@ mds_comum/
 
 ## Como uma aula usa
 
-No `requirements.txt` da aula:
-
-```text
--e ../../comum
-```
-
-(o caminho é relativo à pasta da aula — rode o `pip install` de dentro dela).
+Ele já vem no `requirements.txt` da raiz (`-e ./comum`), então toda aula o
+enxerga sem configurar nada.
 
 No código:
 

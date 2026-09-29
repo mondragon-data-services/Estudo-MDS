@@ -58,6 +58,7 @@ class ConfigSqlServer:
     usuario: str
     senha: str
     driver: str
+    tempo_logon: int
 
 
 def sqlserver() -> ConfigSqlServer:
@@ -69,4 +70,5 @@ def sqlserver() -> ConfigSqlServer:
         usuario=os.getenv("SQL_USER", ""),
         senha=os.getenv("SQL_PASSWORD", ""),
         driver=os.getenv("ODBC_DRIVER", "ODBC Driver 18 for SQL Server"),
+        tempo_logon=int(os.getenv("SQL_LOGIN_TIMEOUT", "60")),
     )

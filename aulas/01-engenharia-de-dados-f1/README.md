@@ -43,26 +43,27 @@ analítico que qualquer pessoa consegue usar.
 
 Pré-requisito: **Python 3.10 ou superior**. Esta aula **não** usa o SQL Server.
 
+O ambiente Python é **um só para o repositório inteiro** (a `.venv` da raiz). Na
+raiz do repositório:
+
 ```bash
 git clone https://github.com/mondragon-data-services/Estudo-MDS.git
-cd Estudo-MDS/aulas/01-engenharia-de-dados-f1
+cd Estudo-MDS
 
-python -m venv .venv
-.venv\Scripts\activate          # Windows
-source .venv/bin/activate       # Linux / macOS
-
-pip install -r requirements.txt
+.\scripts\preparar-ambiente.ps1     # Windows (PowerShell)
+bash scripts/preparar-ambiente.sh     # Linux / macOS
 ```
 
-Ou, se preferir, use o script pronto — ele também registra o kernel do Jupyter:
+O script cria a `.venv`, instala as dependências de todas as aulas e registra o
+kernel **`Python (Estudo-MDS)`**, já configurado em todos os notebooks.
 
-```bash
-.\scripts\setup.ps1             # Windows (PowerShell)
-bash scripts/setup.sh           # Linux / macOS
-```
-
-> Todos os comandos abaixo são executados **de dentro da pasta da aula**
-> (`aulas/01-engenharia-de-dados-f1`).
+> Os comandos abaixo são executados com a `.venv` ativa e **de dentro da pasta
+> da aula**:
+>
+> ```bash
+> .venv\Scripts\activate                  # Windows   (Linux/macOS: source .venv/bin/activate)
+> cd aulas/01-engenharia-de-dados-f1
+> ```
 
 ### Rodar o pipeline inteiro (≈ 3 minutos)
 
@@ -114,14 +115,10 @@ code --install-extension ms-toolsai.jupyter
 
 Depois recarregue a janela: `Ctrl+Shift+P` → `Developer: Reload Window`.
 
-**2. O kernel não aparece na lista.** Registre o ambiente do projeto:
-
-```bash
-.venv\Scripts\python.exe -m ipykernel install --user --name f1-pipeline --display-name "Python (f1-pipeline)"
-```
-
-No notebook, clique em **Select Kernel** (canto superior direito) e escolha
-**`Python (f1-pipeline)`**.
+**2. O kernel não aparece na lista.** Rode o `scripts/preparar-ambiente` da
+raiz (ele registra o kernel) e recarregue a janela. No notebook, clique em
+**Select Kernel** (canto superior direito) e escolha **`Python (Estudo-MDS)`** —
+ou, em **Python Environments**, a `.venv` da raiz do repositório.
 
 **Em qualquer um dos casos:** a primeira célula de cada notebook é o *bootstrap*
 (configura o `sys.path` e importa o `pandas`). Rode-a antes das demais, senão as
@@ -130,9 +127,9 @@ seguintes falham com `NameError`.
 </details>
 
 > **Windows:** se `python` não for reconhecido no terminal, o Python não está no
-> PATH. Use o interpretador do ambiente virtual diretamente —
-> `.venv\Scripts\python.exe -m streamlit run app/streamlit_app.py` — ou ative o
-> ambiente com `.venv\Scripts\activate`.
+> PATH. Use o interpretador do ambiente virtual diretamente — de dentro da
+> pasta da aula, `..\..\.venv\Scripts\python.exe -m streamlit run app/streamlit_app.py`
+> — ou ative o ambiente com `.venv\Scripts\activate` na raiz.
 
 ---
 

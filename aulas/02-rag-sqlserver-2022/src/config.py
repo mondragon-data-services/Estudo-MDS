@@ -2,7 +2,7 @@
 
 A conexão com o SQL Server (servidor, usuário, senha, driver) é a mesma para
 todas as aulas e vem do .env da RAIZ do repositório. Aqui ficam só os valores
-desta aula, que podem ser sobrescritos em aulas/02-rag-sqlserver-2017/.env.
+desta aula, que podem ser sobrescritos em aulas/02-rag-sqlserver-2022/.env.
 """
 import os
 from pathlib import Path
