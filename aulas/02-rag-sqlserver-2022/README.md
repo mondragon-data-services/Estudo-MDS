@@ -1,4 +1,5 @@
 # Aula 02 — Quem disse? RAG com SQL Server 2022 (sem tipo VECTOR)
+📺 **Assista à aula:** https://youtu.be/FpewoB6I1Ig
 
 Aula da Mondragon Data Services: guardar embeddings em `VARBINARY(MAX)` no
 **SQL Server 2022** e calcular a similaridade semântica — na aplicação

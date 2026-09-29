@@ -1,4 +1,5 @@
 # 🏁 Aula 01 — Engenharia de Dados na prática: as três fases de um pipeline
+📺 **Assista à aula:** https://youtu.be/XRq_M2O74Q0
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Great Expectations](https://img.shields.io/badge/Great%20Expectations-1.x-ff6310)

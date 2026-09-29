@@ -7,10 +7,10 @@ máquina do aluno.
 
 ## Sumário
 
-| # | Aula | Assuntos | SQL Server? |
-|---|---|---|:---:|
-| 01 | [Engenharia de Dados na prática: as três fases de um pipeline](aulas/01-engenharia-de-dados-f1/) | ingestão de API, Great Expectations, bronze/silver/gold, Streamlit | — |
-| 02 | [Quem disse? RAG com SQL Server 2022](aulas/02-rag-sqlserver-2022/) | embeddings em `VARBINARY`, `GENERATE_SERIES`, busca semântica, RAG, Streamlit | ✅ |
+| # | Aula | Assuntos | SQL Server? | Vídeo |
+|---|---|---|:---:|---|
+| 01 | [Engenharia de Dados na prática: as três fases de um pipeline](aulas/01-engenharia-de-dados-f1/) | ingestão de API, Great Expectations, bronze/silver/gold, Streamlit | — | [▶️ Assistir](https://youtu.be/XRq_M2O74Q0) |
+| 02 | [Quem disse? RAG com SQL Server 2022](aulas/02-rag-sqlserver-2022/) | embeddings em `VARBINARY`, `GENERATE_SERIES`, busca semântica, RAG, Streamlit | ✅ | [▶️ Assistir](https://youtu.be/FpewoB6I1Ig) |
 
 ## Como o repositório está organizado
 
